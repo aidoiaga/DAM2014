@@ -5,24 +5,24 @@
     </head>
     <body>
         <h1>Información sobre el producto</h1>
-        <form action="formulario.php" method="POST">
+        <form action="post.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Datos básicos</legend>
-                <p><label>Nombre</label></p>
-                <p><input type="text" name="nombre" value=""/></p>
-                <p><label>Password</label></p>
-                <p><input type="password" name="password" value=""/></p>
-                <p><label>Descripción</label></p>
-                <p><textarea name="descripcion" cols="40" rows="5"></textarea></p>
+                <p><label for="nombre">Nombre</label></p>
+                <p><input id="nombre" type="text" name="nombre" value=""/></p>
+                <p><label for="password">Password</label></p>
+                <p><input type="password" id="password" name="password" value=""/></p>
+                <p><label for="descripcion">Descripción</label></p>
+                <p><textarea id="descripcion" name="descripcion" cols="40" rows="5"></textarea></p>
                 <p><label>Foto</label><input type="file" name="foto"/></p>
                 <p><input type="checkbox" name="contador" id="contador" /><label for="contador">Añadir contador de visitas</label></p>
             </fieldset>
             <fieldset>
                 <legend>Datos económicos</legend>
-                <p><label>Precio</label>
-                <input type="text" name="precio" value="">
+                <p><label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio" value="">
                 <label>€</label>
-                <label>Impuestos</label>
+                <label for="impuestos">Impuestos</label>
                 <select id="impuestos" name="impuestos" size="1" >
                     <option value="" selected="selected">-Selecciona-</option>
                     <option value="4">4%</option>
@@ -31,7 +31,7 @@
                     <option value="18">18%</option>
                 </select></p>
                 <p><label>Promoción</label></p>
-                <p><input type="radio" id="ninguno" name="promocion" value="ninguno"/>
+                <p><input type="radio" id="ninguno" name="promocion" value="ninguno" checked="checked" />
                 <label for="ninguno">Ninguno</label></p>
                 <p><input type="radio" id="gratuito" name="promocion" value="gratuito"/>
                 <label for="gratuito">Transorte Gratuito</label></p>
