@@ -1,0 +1,24 @@
+/* * { border: 1px solid #000;
+    box-sizing: border-box;
+}*/
+
+li{
+    position: relative;
+    list-style: none;
+}
+
+li ul {
+    position: absolute;
+    left: 70px;
+    top: 0;
+}
+
+ul li ul {
+    padding: 0;
+    display: none;
+}
+
+ul li:hover ul{
+    display: block;
+}
+
