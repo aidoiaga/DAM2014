@@ -1,15 +1,19 @@
-/* * { border: 1px solid #000;
+ * { border: 1px solid #000;
     box-sizing: border-box;
-}*/
+}
 
 li{
     position: relative;
     list-style: none;
 }
 
+ul{
+    width: 25%;
+}
+
 li ul {
     position: absolute;
-    left: 70px;
+    left: 100%;
     top: 0;
 }
 
