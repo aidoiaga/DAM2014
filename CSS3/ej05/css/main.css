@@ -1,0 +1,15 @@
+@font-face{
+    font-family: 'Mysery';
+    src: url('../fonts/MiseryLovesCompanyDEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p { font-size: 2em; margin: 1em; padding: 0 5px; font-family: 'Mysery'; }
+
+
+p:nth-child(6n+2){}
+p:nth-child(6n+3){}
+p:nth-child(6n+4){}
+p:nth-child(6n+5){}
+p:nth-child(6n+6){}
