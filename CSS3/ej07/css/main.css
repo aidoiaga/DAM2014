@@ -6,8 +6,7 @@
     font-size: 20px;
     position:absolute;
     padding: 5px;
-    transition-delay:2s;
-    transition-duration: 2s;
+
 }
 .box:hover {
     width: 50px;
@@ -17,7 +16,8 @@
     font-size: 18px;
     position:absolute;
     /*-webkit-transform: rotate(270deg);*/
-    -webkit-transform: scale(2);
+    -webkit-transform: translatex(200px) translatey(200px) scale(2);
+    -webkit-transition-duration: 2s;
 }
 .ex01 .box {
     left: 10px;
