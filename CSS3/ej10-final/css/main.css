@@ -34,6 +34,7 @@ body {
 .view .mask {
    background-color: rgba(219,127,8, 0.7);
 }
+
 .view img {
    display: block;
    position: relative;
@@ -72,3 +73,20 @@ body {
 }
 
 /* ANIMACIONES Y TRANSICIONES */
+
+.mask {
+  display: none;
+}
+
+.view-first:hover {
+  position: relative;
+  -webkit-transform: scale(2.1);
+  /*-webkit-transform-origin:;*/
+  -webkit-transition-duration: 2s;
+  z-index: 20;
+}
+
+.view-first:hover .mask {
+  display: block;
+  -webkit-transition-duration: 2s;
+}

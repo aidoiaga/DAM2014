@@ -19,4 +19,21 @@
 }
 
 
+
 /* ANIMACIONES Y TRANSFORMACIONES */
+#second {
+    -webkit-animation-duration: 1s;
+    /*-webkit-transform: rotate(6deg);
+    -webkit-transition-duration: 1s;*/
+    -webkit-animation-name: segundos;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes segundos{
+    from{
+        -webkit-transform: rotate(6deg);
+    }
+    to{
+
+    }
+}
