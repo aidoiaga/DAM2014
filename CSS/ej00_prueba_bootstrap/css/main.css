@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+/* General */
+html, body {
+    background-color: #f7f7f7;
+}
+
+body {
+    font: 14pt/1.48em "Source Sans Pro", sans-serif ;/*tamaño de base / interlineado(20.72/14) fuentes;*/
+    color:#464646;
+}
+
+ul{
+    margin: 0;
+}
+
+a {
+    color:#464646;
+    text-decoration: none;
+}
+
+table{
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+}
+
+/*p {
+    text-align: justify;
+
+}*/
+
+h1, .h1 {
+    font-size: 2em;/*28pt media el h1 entre los 14pt de fuente base*/
+    line-height: 1.08em; /* 30.24pt / 28pt */
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* Textos */
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.normal { font-weight: normal; }
+.small { font-size: 0.8em; }
+.big { font-size: 1.5em; }
+.uppercase { text-transform: uppercase; }
+.list { list-style: none; padding: 0; }
+.txt-center { text-align: center; }
+.list p { margin: 0; }
+.list li { padding: 20px 0; }
+.price {font-size: 1.5em; font-weight: bold; }
+.list li:first-child {padding-top: 0; }
+.list li h3 { color: #03f; font-style: italic;}
+.list-blue li {
+    background: transparent url("../img/azul.png") no-repeat 0 0;
+    padding-left: 20px;
+}
+
+/* Colores */
+.txt-red { color:#FF0000; }
+.txt-blue { color: #0033ff; }
+
+.bg-white {
+    background-color:#FFFFFF;
+}
+
+/* TO-DO */
+.list-blue { }
+
+/*Botones*/
+.btn {
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #999999, #CCCCCC);
+    color:#FFFFFF;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100px;
+    box-shadow: 0 1px 4px #cdcdcd;
+    border-radius: 3px;
+    padding: 5px;
+    margin: auto 5px;
+}
+
+.btn-red {
+    background-image: linear-gradient(to bottom, #F74040 80%, #D33535);
+}
+
+.btn-big {
+    padding: 10px inherit;
+}
+
+/*Cabecera*/
+/* Breadcrumb en mayuscula */
+/*Ultimo elemento en rojo*/
+.breadcrumb {
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumb li{
+    display: inline-block;
+}
+
+.breadcrumb li:after {
+    content: "/";
+}
+
+.breadcrumb li:last-child:after {
+    content: "";
+}
+
+.breadcrumb a {
+    margin-right: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Layout */
+
+.wrapper {
+    width: 90%;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 4.0404040404% 0; /*(40/990)*100 % */
+}
+
+.wrapper:before, .wrapper:after,
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after ,
+.clearfix:after {
+    clear: both;
+}
+
+.read-more {
+    display: none;
+}
+
+.bg-gray:first-child .wrapper {
+    padding-bottom: 0;
+}
+
+.description {
+    padding-left: 20px;
+}
+
+.fleft { float: left; }
+.fright { float: right; }
+
+.overflowx{ overflow-x: scroll; }
+
+.col-25 { width: 25%}
+.col-50 { width: 50%}
+.col-75 { width: 75%}
+
+.marco {
+    background-color:#FFFFFF;
+    padding: 10px;
+    box-shadow: 0 0 5px #cdcdcd;
+}
+
+.marco p{
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper {
+        padding: 2% 0;
+    }
+
+    .col-25.marco {
+        width: 40%;
+    }
+
+    .col-75.description {
+        width: 60%;
+    }
+
+    .description p {
+        height: 250px;
+        overflow: hidden;
+
+    }
+
+    .read-more {
+        display: block;
+    }
+
+    h1, .h1 {
+        font-size: 1.6em;
+        text-transform: none;
+    }
+
+    .marco .price {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .marco .btn-big {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .list li h3 {
+        float: none;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .list li p {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .wrapper {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .breadcrumb {
+        float: left;
+    }
+
+    .navbar-toggle {
+        display: block;
+        float: right;
+    }
+
+    .col-25.marco,
+    .col-75.description {
+        width: 100%;
+    }
+
+    .col-50 {}
+
+    .col-75 {}
+
+}
+
+/*TO - DO*/
+
+/*
+    Pie en linea
+*/
