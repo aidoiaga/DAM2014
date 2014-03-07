@@ -75,18 +75,53 @@ body {
 /* ANIMACIONES Y TRANSICIONES */
 
 .mask {
-  display: none;
+  visibility: hidden;
 }
 
 .view-first:hover {
   position: relative;
   -webkit-transform: scale(2.1);
-  /*-webkit-transform-origin:;*/
+  /*background-color: rgba(219,127,8, 0.7);*/
   -webkit-transition-duration: 2s;
   z-index: 20;
 }
 
-.view-first:hover .mask {
-  display: block;
-  -webkit-transition-duration: 2s;
+.view-first:nth-child(4n+1):hover {
+  -webkit-transform-origin: top left;
 }
+
+.view-first:nth-child(4n+2):hover {
+  -webkit-transform-origin: top right;
+}
+
+.view-first:nth-child(4n+3):hover {
+  -webkit-transform-origin: bottom left;
+}
+
+.view-first:nth-child(4n+4):hover {
+  -webkit-transform-origin: bottom right;
+}
+
+/*.view-first:hover .mask {
+  visibility: visible;
+  -webkit-transition-duration: 2s;
+}*/
+
+/*.view-first:hover .mask {
+  display: block;
+  -webkit-animation-name:naranja;
+  -webkit-animation-duration: 2s;
+}
+
+@-webkit-keyframes naranja{
+  from{
+    visibility: hidden;
+    background-color: rgba(219,127,8, 0.7);
+  }
+  to{
+    visibility: visible;
+    background-color: rgba(219,127,8, 0.7);
+  }
+}*/
+
+

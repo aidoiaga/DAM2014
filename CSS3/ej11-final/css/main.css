@@ -22,18 +22,73 @@
 
 /* ANIMACIONES Y TRANSFORMACIONES */
 #second {
-    -webkit-animation-duration: 1s;
-    /*-webkit-transform: rotate(6deg);
-    -webkit-transition-duration: 1s;*/
+    -webkit-animation-duration: 60s;
     -webkit-animation-name: segundos;
     -webkit-animation-iteration-count: infinite;
 }
 
-@keyframes segundos{
+@-webkit-keyframes segundos{
     from{
-        -webkit-transform: rotate(6deg);
+        -webkit-transform: rotate(0deg);
+    }
+    %25{
+        -webkit-transform: rotate(90deg);
+    }
+    %50{
+        -webkit-transform: rotate(180deg);
+    }
+    %75{
+        -webkit-transform: rotate(270deg);
     }
     to{
+        -webkit-transform: rotate(360deg);
+    }
+}
 
+#minute {
+    -webkit-animation-duration: 3600s;
+    -webkit-animation-name: minutos;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes minutos{
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    %25{
+        -webkit-transform: rotate(90deg);
+    }
+    %50{
+        -webkit-transform: rotate(180deg);
+    }
+    %75{
+        -webkit-transform: rotate(270deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#hour {
+    -webkit-animation-duration: 43200s;
+    -webkit-animation-name: horas;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes horas{
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    %25{
+        -webkit-transform: rotate(90deg);
+    }
+    %50{
+        -webkit-transform: rotate(180deg);
+    }
+    %75{
+        -webkit-transform: rotate(270deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
     }
 }
