@@ -72,7 +72,7 @@ $(document).ready(function(){
 
     var $newp = $("<p>Parrafo añadido</p>");
     var $newh = $("<h2>Titulo 2 añadido</h2>");
-    $('div.module:last').append($newh).append($newp);
+    //$('div.module:last').append($newh).append($newp);
 
     var $wednesday = $('<option value="wednesday">Wednesday</option>');
     $('select[name=day]').append($wednesday);
@@ -83,6 +83,6 @@ $(document).ready(function(){
     'id' : 'myModule'
     });
 
-    $newEl.append($img.first().clone()).insertAfter($last);
+    //$newEl.append($img.first().clone()).insertAfter($last);
 
 });
