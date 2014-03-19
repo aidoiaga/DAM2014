@@ -325,5 +325,15 @@ margin: 15px 0;
 	height: 10000px;
 	background-color: #333;
 	z-index: 100;
-	
+
+}
+
+/*Añadido por me para el slideshow*/
+
+.previo {
+	float: left;
+}
+
+.proximo {
+	float: right;
 }
