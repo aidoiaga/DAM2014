@@ -3,16 +3,17 @@ $(document).ready(function(){
     var valores = [];
     var index = 0;
     var $on = true;
-    var start = setInterval(function() {
+    var initAjax = function() {
         $.ajax({
             url : '../servidor/generaContenidos.php',
             dataType : 'text',
             cache : false,
             success : function(data, textStatus, jqXHR){
                 var now = new Date();
-                $anterior = $('#ticker').text(now.getHours() +':' + now.getMinutes() + ':' + now.getSeconds() + ' : ' +data);
+                var $hora = now.getHours() +':' + now.getMinutes() + ':' + now.getSeconds();
+                $anterior = $('#ticker').text($hora + ' : ' +data);
                 //console.log($anterior);
-                valores.push($anterior.text());
+                valores.push({hora : $hora, texto : $anterior.text()});
                 //console.log(valores[index]);
                 //console.log(valores[index].text());
                 //console.log(index);
@@ -23,38 +24,23 @@ $(document).ready(function(){
                 console.log(errorThrown);
             }
         });
-    }, 1000);
+    };
+    var start = setInterval(initAjax, 1000);
     $('#detener').on('click', function(){
         if($on){
             clearInterval(start);
             $on = false;
         }
         else{
-            start = setInterval(function() {
-                $.ajax({
-                    url : '../servidor/generaContenidos.php',
-                    dataType : 'text',
-                    cache : false,
-                    success : function(data, textStatus, jqXHR){
-                        var now = new Date();
-                        $anterior = $('#ticker').text(now.getHours() +':' + now.getMinutes() + ':' + now.getSeconds() + ' : ' +data);
-                        valores.push($anterior.text());
-                        index++;
-
-                    },
-                    error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
-                        console.log(errorThrown);
-                    }
-                });
-            }, 1000);
+            start = setInterval(initAjax, 1000);
             $on = true;
         }
 
     });
     $('#anterior').on('click', function(){
-        $('ticker').text(valores[index--]);
+        $('ticker').text(valores[index--].hora + ' : ' +valores[index--].texto);
     });
     $('#siguiente').on('click', function(){
-        $('ticker').text(valores[index++]);
+        $('ticker').text(valores[index++].hora + ' : ' +valores[index++].texto);
     });
 });
