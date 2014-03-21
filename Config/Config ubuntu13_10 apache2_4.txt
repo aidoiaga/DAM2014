@@ -7,7 +7,7 @@
 		Require all granted
 	</Directory>
 
-2. En /etc/apache2/sites-enabled:
+2. En /etc/apache2/sites-enabled/000-default.conf:
 
 	-Añadir esta linea:
 		ServerName localhost
