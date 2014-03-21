@@ -1,0 +1,20 @@
+
+1. En /etc/apache2/apache2.conf añadir siguientes lineas:
+
+	<Directory **RUTA DE LA CARPETA(/home/aidoiaga/workspace/DAM2014)**> 
+		Options Indexes FollowSymLinks
+		AllowOverride all
+		Require all granted
+	</Directory>
+
+2. En /etc/apache2/sites-enabled:
+
+	-Añadir esta linea:
+		ServerName localhost
+
+	-Modificar esta linea
+		DocumentRoot **RUTA DE LA CARPETA(/home/aidoiaga/workspace/DAM2014)**
+
+3. Ejecutar siguiente comando:
+	
+	$ sudo service apache2 restart
