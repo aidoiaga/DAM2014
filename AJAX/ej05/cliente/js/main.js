@@ -7,6 +7,7 @@ $(document).ready(function(){
                 url : '../servidor/compruebaDisponibilidadJSON.php',
                 data : { login : login },
                 type : 'post',
+                //dataType : 'json',
                 cache : false,
                 success : function(data, textStatus, jqXHR){
                         var objeto_json = JSON.parse(data);
