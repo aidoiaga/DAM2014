@@ -9,7 +9,7 @@ $(document).ready(function(){
         $.ajax({
                 url : '../servidor/compruebaDisponibilidadJSON.php',
                 data : { login : login },
-                type : 'POST',
+                type : 'post',
                 //dataType : 'json',
                 cache : false,
                 success : function(data, textStatus, jqXHR){

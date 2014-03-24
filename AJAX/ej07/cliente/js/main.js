@@ -7,8 +7,7 @@ $(document).ready(function(){
             //dataType : 'json',
             cache : false,
             success : function(data, textStatus, jqXHR){
-                    console.log(data);
-                    //var objeto_json = JSON.parse(data);
+                    //console.log(data);
                     var objeto_json = JSON.parse(data);
 
                     console.log(objeto_json);
@@ -17,7 +16,6 @@ $(document).ready(function(){
                     $.each(objeto_json, function(i, el){
 
                         $option = '<option value="'+i+'">' + el + '</option>';
-                        //$option = '<option>' + el + '</option>';
                             options.push($option);
                     });
                     $('.provincia').append(options);
@@ -28,9 +26,10 @@ $(document).ready(function(){
             }
         });
 
-        /*$('.provincia').on('click', function(){
-            var provincia =
-            $.ajax({
+        $('.provincia').on('click', function(){
+            //var provincia = $('.provincia option[value]').val();
+            console.log(provincia);
+            /*$.ajax({
                 url : '../servidor/cargaMunicipiosJSON.php',
                 data : data : { provincia : provincia },
                 type : 'post',
@@ -50,6 +49,6 @@ $(document).ready(function(){
                 error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
                     console.log(errorThrown);
                 }
-            });
-        });*/
+            });*/
+        });
 });
