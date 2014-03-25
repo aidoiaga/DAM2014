@@ -27,11 +27,12 @@ $(document).ready(function(){
         });
 
         $('.provincia').on('click', function(){
-            //var provincia = $('.provincia option[value]').val();
+            $('.municipio').text('');
+            var provincia = $('.provincia option:selected').val();
             console.log(provincia);
-            /*$.ajax({
+            $.ajax({
                 url : '../servidor/cargaMunicipiosJSON.php',
-                data : data : { provincia : provincia },
+                data : { provincia : provincia },
                 type : 'post',
                 cache : false,
                 success : function(data, textStatus, jqXHR){
@@ -49,6 +50,6 @@ $(document).ready(function(){
                 error : function(jqXHR, textStatus, errorThrown){//Es conveniente poner una funcion de error siempre.
                     console.log(errorThrown);
                 }
-            });*/
+            });
         });
 });
