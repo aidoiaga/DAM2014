@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Nuevos elementos</title>
+    <script src="../lib/modernizr.custom.22569.js"></script>
 </head>
 <body>
     <form>
@@ -10,7 +11,7 @@
         <label>URL</label><input type="url"><br/>
         <label>Fecha</label><input type="date"><br/>
         <label>Hora</label><input type="time"><br/>
-        <label>Fecha y Hora</label><input type="datetime-local"><br/>
+        <label>Fecha y Hora</label><input type="datetime"><br/>
         <label>Mes</label><input type="month"><br/>
         <label>Semana</label><input type="week"><br/>
         <label>Numero</label><input type="number"><br/>
@@ -19,7 +20,7 @@
         <label>Busqueda</label><input type="search"><br/>
         <label>Color</label><input type="color"><br/>
 
-        <label>Lista titulo persona</label><input id="form-person-title" type="text" list="mylist">
+        <!--label>Lista titulo persona</label><input id="form-person-title" type="text" list="mylist">
         <datalist id="mylist">
             <option label="Mr" value="Mr">
             <option label="Ms" value="Ms">
@@ -35,10 +36,11 @@
         <label>Password</label><input type="password" pattern="^[0-9]+.{6,}[A-Z]+$"><br/>
         <label>Progreso</label><progress value="0" max="18">0 %</progress><br/>
         <label>Ocupación de disco</label>
-        <meter value="1000" high="800" min="0" max="1200"></meter><br/>
+        <meter value="1000" high="800" min="0" max="1200"></meter><br/-->
         <input type="submit" value="Enviar">
     </form>
-    <script src="jquery-1.11.0.min.js"></script>
+    <ul id="datos"></ul>
+    <script src="../lib/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
