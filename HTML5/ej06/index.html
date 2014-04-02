@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data attributes</title>
+</head>
+<body>
+    <video id="video" controls>
+        <source src="video/SanFranciscoTimeLapse.mp4" type="video/mp4" codecs="vc1.42E01E,mp4a.40.2">
+        <source src="video/SanFranciscoTimeLapse.webm" type="video/webm" codecs="vp8,vorbis">
+        <p>Your browser doesn’t support video. Please download the video in webM or MP4 format. </p>
+    </video>
+
+    <input type="button" value="Iniciar" id="iniciar">
+    <input type="button" value="Pausa" id="pausa">
+    <input type="button" value="Parar" id="parar">
+    <input type="button" value="Avanzar" id="avanzar">
+    <input type="button" value="Retroceder" id="retroceder">
+    <input type="button" value="Inicio" id="inicio">
+    <input type="button" value="Fin" id="fin">
+    <input type="button" value="Pantalla Completa" id="completa">
+    <input type="range" min="0" max="100" step="1" id="volumen">
+    <progress value="0" min="0" max="100" step="0.01"></progress>
+
+
+    <script src="../lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
