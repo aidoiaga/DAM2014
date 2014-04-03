@@ -1,6 +1,7 @@
 $(function(){
     "use strict";
     var video = $('video').get(0);
+    video.volume = 0.5;
 
     $(document).on('click', '#iniciar', function(e){
         video.play();
@@ -42,13 +43,13 @@ $(function(){
             video.webkitRequestFullScreen();
         }
     });
-    //El volumen no funciona
+
     $(document).on('change', '#volumen', function(e){
-        video.volumen = this.value;
+        video.volume = this.value;
     });
 
     $('video').on('timeupdate',function(e){
-        $('progress').val(this.currentTime);
+        $('progress').val(this.currentTime/this.duration*100);
     });
 
 });
