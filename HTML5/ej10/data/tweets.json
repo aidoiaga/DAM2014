@@ -2,155 +2,133 @@
     {
     "idTweet" : "00001",
     "idUser" : "0001",
-    "user" : "aidoiaga",
     "text" : "Llevas mucho tiempo conduciendo sin descansar",
-    "date" : "20130923"
+    "date" : "1396627278"
     },
     {
     "idTweet" : "00002",
     "idUser" : "0001",
-    "user" : "aidoiaga",
     "text" : "Te has salido de la ruta especificada",
-    "date" : "20130923"
+    "date" : "1396627278"
     },
     {
     "idTweet" : "00003",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130924"
+    "date" : "1396627855"
     },
     {
     "idTweet" : "00004",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130924"
+    "date" : "1396627855"
     },
     {
     "idTweet" : "00005",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130924"
+    "date" : "1396627855"
     },
     {
     "idTweet" : "00006",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130924"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00007",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130926"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00008",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130926"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00009",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130926"
+    "date" : "1396629536"
     },
     {
     "idTweet" : "00010",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130926"
+    "date" : "1396629568"
     },
     {
     "idTweet" : "00011",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20130926"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00012",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131002"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00013",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131002"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00014",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131002"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00015",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131002"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00016",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131002"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00017",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00018",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00019",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00020",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00021",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     },
     {
     "idTweet" : "00022",
     "idUser" : "0002",
-    "user" : "mrolan",
     "text" : "Llevas un retraso en tu ruta",
-    "date" : "20131123"
+    "date" : "1396629525"
     }
 ]

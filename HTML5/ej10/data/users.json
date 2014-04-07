@@ -2,12 +2,11 @@
     {
     "idUser" : "0001",
     "name" : "Ander Idoiaga",
-    "img" : ""
+    "img" : "data/img/ander.jpg"
     },
     {
     "idUser" : "0002",
     "name" : "Mikel Rolan",
-    "img" : ""
-    },
-
+    "img" : "data/img/mikel.jpg"
+    }
 ]
