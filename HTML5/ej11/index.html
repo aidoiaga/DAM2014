@@ -6,8 +6,15 @@
 </head>
 <body>
     <h1>Tareas pendientes</h1>
-    <input type="text" id="todo" name="todo" placeholder="What do you need to do?" />
-    <input type="submit" value="Add Todo" id="addToDo"/>
+    <section>
+        <input type="text" id="todo" name="todo" placeholder="What do you need to do?" />
+        <input type="button" value="Add Task" id="addToDo"/>
+        <input type="button" value="Show Tasks" id="showToDo"/>
+    </section>
+    <section>
+        <input type="text" id="todoCode" placeholder="Enter task code to remove or update it" />
+        <input type="button" value="Remove Task" id="removeToDo"/>
+    </section>
     <ul id="todoItems"></ul>
 
     <script src="../lib/jquery-1.11.0.min.js"></script>

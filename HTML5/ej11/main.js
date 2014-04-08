@@ -41,7 +41,25 @@ $(function(){
         open();
     };
 
-    var add = function(id, todoText, hecho) {
+    var remove = function(key) {
+        var transaction = db.transaction(["todo-list"], "readwrite");
+        var store = transaction.objectStore("todo-list");
+
+        var request = store.delete(parseInt(key));
+
+        request.onsuccess = function(e) {
+            console.log("Sucessful delete: "+e);
+        };
+
+        request.onerror = onerror;
+
+        store.transaction.oncomplete = function(event) {
+            showTodo();
+        };
+
+    };
+
+    var add = function(todoText, hecho) {
         var transaction = db.transaction(["todo-list"], "readwrite");
         var store = transaction.objectStore("todo-list");
 
@@ -59,7 +77,7 @@ $(function(){
 
         request.onerror = function(e) {
             console.log("Error adding: ", e);
-        };var numElem = 0;
+        };
     };
 
     var addTodo = function() {
@@ -69,7 +87,41 @@ $(function(){
         todo.value = "";
     };
 
+    var removeTodo = function() {
+        var key = document.getElementById("todoCode");
+        remove(key.value);
+        key.value = "";
+    };
+
+    var showTodo = function() {
+        var transaction = db.transaction(["todo-list"]);
+        var store = transaction.objectStore("todo-list");
+        var data = [];
+        var request = store.openCursor();
+
+        request.onsuccess = function (event) {
+            var cursor = event.target.result;
+
+            if (cursor) {
+                data.push("<li>[Code:"+cursor.value.timeStamp+"] - Task: "+cursor.value.text+"</li>"); // value is the stored object
+                cursor.continue(); // get the next object
+            }
+        };
+
+        request.onerror = onerror;
+
+        store.transaction.oncomplete = function(event) {
+            $('#todoItems').empty();
+            $('#todoItems').append(data);
+        };
+
+
+
+    };
+
     $(document).on('click','#addToDo',addTodo);
+    $(document).on('click','#showToDo',showTodo);
+    $(document).on('click','#removeToDo',removeTodo);
 
     window.addEventListener("DOMContentLoaded", init, false);
 });
