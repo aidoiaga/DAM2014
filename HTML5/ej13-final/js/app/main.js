@@ -33,12 +33,12 @@ $(function(){
 
         numPlayer = $('#next').data('player');
 
-        if(numPlayer === 0){
+        if(numPlayer === 1){
             name = "Jane Doe";
-            $('#next').data('player', 1);
+            $('#next').data('player', 2);
         }
-        else if(numPlayer === 1){
-            $('#next').data('player', 0);
+        else if(numPlayer === 2){
+            $('#next').data('player', 1);
             $('#players').empty();
             name = "John Doe";
         }
@@ -144,7 +144,7 @@ $(function(){
             request.onerror = onerror;
 
             store.transaction.oncomplete = function(event) {
-                $('#button').append('<input type="button" id="next" value="Show Players" data-player="0"/>');
+                $('#button').append('<input type="button" id="next" value="Show Players" data-player="1"/>');
             };
         });
     };
