@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ej01-jQueryMobile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+    <!-- Start of first page -->
+    <div data-role="page" id="page1" data-title="Page 1">
+
+        <div data-role="header">
+            <h1>Page 1</h1>
+            <a href="index.html#page2" class="ui-btn-right">Next</a>
+
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html#page1">One</a></li>
+                        <li><a href="index.html#page2">Two</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>I'm first in the source order so I'm shown as the page.</p>
+            <p>
+                View internal page called
+                <a href="#page2">Page 2</a>
+            </p>
+            <p>
+                <a href="http://jquerymobile.com/" rel="external" target="_blank">jQueryMobile documentation</a>
+            </p>
+            <p>
+                <a href="pagina2.html" data-role="button" data-ajax="false">Cargar Pagina 2</a>
+            </p>
+            <p>
+                <a href="dialogs/dialog1.html" data-rel="dialog" data-transition="flow">Dialog 1</a>
+            </p>
+
+            <a href="#popupBasic" data-rel="popup">Open Popup</a>
+            <div data-role="popup" id="popupBasic">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
+                data-iconpos="notext" class="ui-btn-right">Close</a>
+                <p>This is a completely basic popup, no options set.<p>
+            </div>
+
+            <a href="#panelBasic" data-rel="panel">Open Panel</a>
+            <div data-role="panel" id="panelBasic">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
+                data-iconpos="notext" class="ui-btn-right">Close</a>
+                <p>This is a completely basic popup, no options set.<p>
+            </div>
+
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">
+                    <button type="submit" data-theme="c">Cancel</button>
+                </div>
+                <div class="ui-block-b">
+                    <button type="submit" data-theme="b">Submit</button>
+                </div>
+            </fieldset>
+            <div data-role="collapsible" data-theme="b" data-content-theme="b">
+
+                <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                   <h3>I'm a header</h3>
+                   <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+                </div>
+
+               <h3>I'm a header</h3>
+               <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+            </div>
+
+            <div data-role="collapsible-set">
+
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>Section 1</h3>
+                    <p>I'm the collapsible set content for section 1.</p>
+                </div>
+
+                <div data-role="collapsible">
+                    <h3>Section 2</h3>
+                    <p>I'm the collapsible set content for section 2.</p>
+                </div>
+            </div>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page1 Footer</h4>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="index.html" data-role="button" data-icon="plus">Add</a>
+                <a href="index.html" data-role="button" data-icon="arrow-u">Up</a>
+                <a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+            </div>
+            <div data-role="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <!-- Start of second page -->
+    <div data-role="page" id="page2" data-title="Page 2">
+
+        <div data-role="header">
+            <h1>Page 2</h1>
+            <a href="index.html#page1" class="ui-btn-left">Back</a>
+            <a href="index.html#page3" class="ui-btn-right">Next</a>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="index.html#page1">One</a></li>
+                    <li><a href="index.html#page2">Two</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>
+                I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.
+            </p>
+            <p>
+                <a href="#page1">Back to page1</a>
+            </p>
+            <p>
+                <a id="event-example">Show third page</a>
+            </p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page2 Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <!-- Start of third page -->
+    <div data-role="page" id="page3" data-title="Page 3">
+
+        <div data-role="header">
+            <h1>Page 3</h1>
+            <a href="index.html#page2" class="ui-btn-left">Back</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Page access with "location.hash"</p>
+            <p>
+                <a href="#page2">Back to page 2</a>
+            </p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page3 Footer</h4>
+        </div><!-- /footer -->
+    </div>
+    <!-- /page -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

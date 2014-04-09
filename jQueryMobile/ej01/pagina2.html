@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+    <!-- Start of first page -->
+    <div data-role="page" id="foo">
+
+        <div data-role="header">
+            <h1>Pagina 2</h1>
+            <a href="index.html" class="ui-btn-left">Back</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+                <a id="method-example" data-role="button">Siguiente</a>
+                <p>
+                    <a href="index.html" data-prefetch="true" data-rel="back" data-direction=”reverse”>BACK</a>
+                </p>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>Footer Pagina 2</h4>
+        </div>
+        <!-- /footer --> </div>
+    <!-- /page -->
+    <!-- Start of second page -->
+    <div data-role="page" id="bar">
+
+        <div data-role="header">
+            <h1>Bar</h1>
+            <a href="pagina2.html#foo" class="ui-btn-left">Back</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>BAR</p>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+        <!-- /footer --> </div>
+    <!-- /page -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
