@@ -17,14 +17,21 @@
         <div data-role="header">
             <h1>Page 1</h1>
             <a href="index.html#page2" class="ui-btn-right">Next</a>
+            <a href="#panel" data-role="button" data-icon="grid" class="ui-btn-left" data-iconpos="notext">Options</a>
 
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="index.html#page1">One</a></li>
-                        <li><a href="index.html#page2">Two</a></li>
-                    </ul>
-                </div><!-- /navbar -->
+            <!--div data-role="navbar">
+                <ul>
+                    <li><a href="index.html#page1">One</a></li>
+                    <li><a href="index.html#page2">Two</a></li>
+                </ul>
+            </div--><!-- /navbar -->
+
         </div><!-- /header -->
+
+        <section id="panel" data-role="panel" data-display="overlay" data-position="left">
+            <p>This is my panel</p>
+            <a class="btn-cerrar-panel" href="#page1" data-rel="close" data-role="button" data-icon="delete">Close Panel</a>
+        </section>
 
         <div role="main" class="ui-content">
             <p>I'm first in the source order so I'm shown as the page.</p>
@@ -49,14 +56,14 @@
                 <p>This is a completely basic popup, no options set.<p>
             </div>
 
-            <a href="#panelBasic" data-rel="panel">Open Panel</a>
+            <!--a href="#panelBasic" data-rel="panel">Open Panel</a>
             <div data-role="panel" id="panelBasic">
                 <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
                 data-iconpos="notext" class="ui-btn-right">Close</a>
                 <p>This is a completely basic popup, no options set.<p>
-            </div>
+            </div-->
 
-            <fieldset class="ui-grid-a">
+            <!--fieldset class="ui-grid-a">
                 <div class="ui-block-a">
                     <button type="submit" data-theme="c">Cancel</button>
                 </div>
@@ -86,7 +93,7 @@
                     <h3>Section 2</h3>
                     <p>I'm the collapsible set content for section 2.</p>
                 </div>
-            </div>
+            </div-->
 
         </div><!-- /content -->
 
@@ -117,23 +124,45 @@
             <h1>Page 2</h1>
             <a href="index.html#page1" class="ui-btn-left">Back</a>
             <a href="index.html#page3" class="ui-btn-right">Next</a>
-            <div data-role="navbar">
+            <!--div data-role="navbar">
                 <ul>
                     <li><a href="index.html#page1">One</a></li>
                     <li><a href="index.html#page2">Two</a></li>
                 </ul>
-            </div><!-- /navbar -->
+            </div--><!-- /navbar -->
         </div><!-- /header -->
 
         <div role="main" class="ui-content">
             <p>
-                I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.
+                Please fill in the formulary to register.
             </p>
+            <div data-role="fieldcontain">
+                <label for="basic">Name</label>
+                <input type="text" name="name" id="name" value=""/>
+                <label for="basic">Last Name</label>
+                <input type="text" name="surname" id="surname" value=""/>
+            </div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>Gender:</legend>
+                        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1"/>
+                        <label for="radio-choice-1">Male</label>
+
+                        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"/>
+                        <label for="radio-choice-2">Female</label>
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="basic">Username</label>
+                <input type="text" name="username" id="username" value=""/>
+                <label for="basic">Password</label>
+                <input type="password" name="password" id="password" value=""/>
+            </div>
             <p>
                 <a href="#page1">Back to page1</a>
             </p>
             <p>
-                <a id="event-example">Show third page</a>
+                <a id="event-example">Show film table</a>
             </p>
         </div><!-- /content -->
 
@@ -151,10 +180,61 @@
         </div><!-- /header -->
 
         <div role="main" class="ui-content">
-            <p>Page access with "location.hash"</p>
-            <p>
-                <a href="#page2">Back to page 2</a>
-            </p>
+            <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+                 <thead>
+                   <tr>
+                     <th data-priority="2">Rank</th>
+                     <th>Movie Title</th>
+                     <th data-priority="3">Year</th>
+                     <th data-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+                     <th data-priority="5">Reviews</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <th>1</th>
+                     <td><a href="http://en.wikipedia.org/wiki/Citizen_Kane" data-rel="external">Citizen Kane</a></td>
+                     <td>1941</td>
+                     <td>100%</td>
+                     <td>74</td>
+                   </tr>
+                   <tr>
+                     <th>2</th>
+                     <td><a href="http://en.wikipedia.org/wiki/Casablanca_(film)" data-rel="external">Casablanca</a></td>
+                     <td>1942</td>
+                     <td>97%</td>
+                     <td>64</td>
+                   </tr>
+                   <tr>
+                     <th>3</th>
+                     <td><a href="http://en.wikipedia.org/wiki/The_Godfather" data-rel="external">The Godfather</a></td>
+                     <td>1972</td>
+                     <td>97%</td>
+                     <td>87</td>
+                   </tr>
+                   <tr>
+                     <th>4</th>
+                     <td><a href="http://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)" data-rel="external">Gone with the Wind</a></td>
+                     <td>1939</td>
+                     <td>96%</td>
+                     <td>87</td>
+                   </tr>
+                   <tr>
+                     <th>5</th>
+                     <td><a href="http://en.wikipedia.org/wiki/Lawrence_of_Arabia_(film)" data-rel="external">Lawrence of Arabia</a></td>
+                     <td>1962</td>
+                     <td>94%</td>
+                     <td>87</td>
+                   </tr>
+                   <tr>
+                     <th>6</th>
+                     <td><a href="http://en.wikipedia.org/wiki/Dr._Strangelove" data-rel="external">Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb</a></td>
+                     <td>1964</td>
+                     <td>92%</td>
+                     <td>74</td>
+                   </tr>
+               </tbody>
+            </table>
         </div><!-- /content -->
 
         <div data-role="footer">
@@ -163,6 +243,6 @@
     </div>
     <!-- /page -->
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

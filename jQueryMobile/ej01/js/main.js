@@ -30,4 +30,24 @@ $(function(){
         window.history.back();
     });
 
+    $('.btn-cerrar-panel').on('tap',function(){
+        alert('Panel hidden');
+    });
+
+    $(document).on('taphold', function(){
+        alert('TAPHOLD');
+    });
+
+    $(document).on('orientationchange', function(event){
+        alert('orientation changed');
+    });
+
+    $('#page1').on('swipe', function(event){
+        alert('swipe');
+    });
+
+
+    $(document).on( 'pagechange', function( event, data ){
+        alert('pagina changed');
+    });
 });
