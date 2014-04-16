@@ -12,7 +12,7 @@ $(function(){
         $ul.append();
     }*/
     var $ul = $('#datos');
-    $li = $('<li>Datos</li>');
+    $li = $('<p>Datos</p>');
         $ul.append($li);
     if(Modernizr.inputtypes.email){
         $li = $('<li>Soporta el email</li>');
@@ -111,7 +111,7 @@ $(function(){
         $ul.append($li);
     }
 
-    $li = $('<li>Codecs</li>');
+    $li = $('<p>Codecs</p>');
     $ul.append($li);
     for (var codec in Modernizr.video) {
         if(Modernizr.video[codec]){

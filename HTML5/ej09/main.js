@@ -2,17 +2,17 @@ $(function(){
     "use strict";
 
     //SessionStorage
-    /*$('#texto').val(sessionStorage.getItem('texto'));
+    $('#texto').val(sessionStorage.getItem('texto'));
 
     $(document).on('keyup', function(e){
         console.log($(texto).val());
         sessionStorage.setItem('texto', $('#texto').val());
-    });*/
+    });
 
 
 
     //localStorage
-    $('#texto').val(localStorage.getItem('texto'));
+    /*$('#texto').val(localStorage.getItem('texto'));
 
     $(document).on('keyup', function(e){
         localStorage.setItem('texto', $('#texto').val());
@@ -30,6 +30,6 @@ $(function(){
         window.addEventListener('storage', handleStorage, false);
     else
         window.attachEvent('onstorage', handleStorage);
-
+*/
 
 });

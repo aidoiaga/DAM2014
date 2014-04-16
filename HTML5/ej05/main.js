@@ -1,9 +1,8 @@
 
 //Ejercicio con JavaScript
-(function(){
+/*(function(){
     "use strict";
     var user = document.getElementsByClassName('user');
-    //console.log(user);
 
     for (var i = user.length - 1; i >= 0; i--) {
 
@@ -26,37 +25,37 @@
 
     }
 
-})();
+})();*/
 
-/*
+
 //Ejercicio con jQuery
 $(function(){
     "use strict";
-    var $user = $('.user');
+    var users = $( '.user' );
     //console.log(user);
-    var $ul = $('#personas');
+    var ul = $( '#personas' );
     var lis =[];
-    $user.each(function(i,el){
 
-        if(el.dataset.delete == 'true'){
-            el.remove();
+    $( '.user' ).each( function( i , user ) {
+
+        if($(this).data( 'lang' ) === 'es'){
+            $(this).data( 'lang' ,'es_Es' );
         }
 
-        if(el.dataset.lang === 'es'){
-            el.dataset.lang = 'es_Es';
+        if($(this).data( 'delete' ) === true ){
+            $(this).remove();
         }
 
-        lis.push('<li>Persona Nº' + (i+1) + '</li>');
-        lis.push('<li>Nombre: ' + el.dataset.name + '</li>');
-        lis.push('<li>Ciudad: ' + el.dataset.city + '</li>');
-        lis.push('<li>Lengua: ' + el.dataset.lang + '</li>');
-        lis.push('<li>Comida: ' + el.dataset.food + '</li>');
-
-
+        lis.push( '<li>Persona Nº' + (i+1) + '</li>' );
+        lis.push( '<li>Nombre: ' +  $(this).data( 'name' ) + '</li>' );
+        lis.push( '<li>Ciudad: ' +  $(this).data( 'city' ) + '</li>' );
+        lis.push( '<li>Lengua: ' +  $(this).data( 'lang' ) + '</li>' );
+        lis.push( '<li>Comida: ' +  $(this).data( 'food' ) + '</li>' );
+        lis.push( '<p></p>' );
 
     });
 
-    $ul.append(lis);
+    ul.append(lis);
 
 
-});*/
+});
