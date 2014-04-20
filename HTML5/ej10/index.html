@@ -5,12 +5,21 @@
     <title>ej10 - WebSQL</title>
 </head>
 <body>
+    <input type="button" id='create' value='Restaurar BBDD'>
     <input type="button" id='ver' value='Ver Tweets'>
     <fieldset>
+        <legend>Tweets</legend>
         <label>Tweet:</label><input type="text" id="tweet">
         <label>IdUser:</label><input type="number" id="idUser">
-        <input type="button" value="Añadir tweet" id="add">
+            <input type="button" value="Añadir tweet" id="add">
     </fieldset>
+    <fieldset>
+        <legend>Delete Tweet</legend>
+        <label>IdTweet:</label><input type="number" id="idTweet">
+        <input type="button" value="Borrar tweet" id="delete">
+        <input type="button" value="Update tweet" id="update">
+    </fieldset>
+
     <ul id="tweets"></ul>
 
     <script src="../lib/jquery-1.11.0.min.js"></script>
