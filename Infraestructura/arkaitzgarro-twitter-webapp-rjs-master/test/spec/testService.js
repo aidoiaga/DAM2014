@@ -40,7 +40,7 @@
                     apiKey : ''
                 }, function(tweets){
                     if(tweets && tweets.statuses && tweets.statuses.length === 100){
-                        console.log(tweets.statuses);
+                        //console.log(tweets.statuses);
                         done();
                     } else {
                         throw "No se han obtenido los tweets";
