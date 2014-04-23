@@ -1,17 +1,22 @@
-define('Controller', ['Data', 'Service'], function(DB, srv){
+define('Controller', ['Data', 'Service', 'UI'], function(DB, srv, ui){
     "use strict";
 
     console.log('Controller module started');
 
-    var getTweetsFromTwitter = function(){
-        srv.getTweets({}, processTweets, error);
+    var getTweetsFromTwitter = function(success, error){
+        srv.getTweets({}, function(data){
+            processTweets(data, function(tweets){
+                DB.addTweets(tweets, success, error);
+                ui.showTweetsList(tweets);
+            }, error);
+        }, error);
     };
 
-    var processTweets = function(data){
+    var processTweets = function(data, success, error){
         var tweets = [];
         if(data && data.statuses && data.statuses.length > 0){
             $.each(data.statuses, function(id, el){
-                var tweet = {'idTweet' : el.id_str,
+                var tweet = {'id' : el.id_str,
                              'date' : new Date(el.created_at),
                              'text' : el.text,
                              'userId' : el.user.id_str,
@@ -20,19 +25,14 @@ define('Controller', ['Data', 'Service'], function(DB, srv){
                             };
                 tweets.push(tweet);
             });
-            console.log(tweets);
+            //console.log(tweets);
+            success(tweets);
         }
-        DB.addTweets(tweets, success, error);
+        else{
+            error('no han llegado datos');
+        }
     };
 
-
-    var success = function(){
-        console.log('DB inserts succeded');
-    };
-
-    var error = function(){
-        console.log('DB inserts error');
-    };
 
     return{
         getTweetsFromTwitter : getTweetsFromTwitter

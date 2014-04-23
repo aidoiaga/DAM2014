@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mocha Spec Runner</title>
-    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
-</head>
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css"></head>
 <body>
     <div id="mocha"></div>
+    <div class="hide">
+        <ul id="twitter-list"></ul>
+    </div>
     <script src="bower_components/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="bower_components/chai/chai.js"></script>
@@ -26,7 +28,17 @@
     <script src="spec/testDB.js"></script>
     <script src="spec/testService.js"></script>
     <script src="spec/testController.js"></script>
+    <script src="spec/testUI.js"></script>
 
     <script>mocha.run()</script>
+
+    <script id="list-tpl"   type="text/x-handlebars-template">
+        {{#each tweets}}
+            <li>
+                {{id}} - {{text}}
+            </li>
+        {{/each}}
+    </script>
+
 </body>
 </html>
