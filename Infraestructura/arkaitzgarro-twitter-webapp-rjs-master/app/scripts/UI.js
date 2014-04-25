@@ -1,9 +1,9 @@
-define('UI', ['jquery', 'handlebars'], function($, Handlebars){
+define('UI', ['quo', 'handlebars'], function($, Handlebars){
     'use strict';
 
     console.log('UI module started');
 
-    var showTweetsList = function(tweets, success, error){
+    var showTweetsList = function(tweets){
         var $list = $('ul#twitter-list');
 
         var listTpl = $('#list-tpl').html();
@@ -11,7 +11,6 @@ define('UI', ['jquery', 'handlebars'], function($, Handlebars){
 
         var html = template({tweets : tweets});
         $list.html(html);
-        success();
     };
 
     return{

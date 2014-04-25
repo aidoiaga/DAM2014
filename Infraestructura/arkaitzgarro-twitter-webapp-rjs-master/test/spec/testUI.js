@@ -31,36 +31,25 @@
         });
 
 
-        describe('#getTweetsList', function () {
+        /*describe('#getTweetsList', function () {
             it('Print ONE Tweets in UI', function (done) {
-                ui.showTweetsList([{'id' : '23423423423452345', 'text' : 'A añadido el tweet'}],
-                                    function(){
-                                        assert.equal($('#twitter-list').children().length,1);
-                                        done();
-                                    },
-                                    function(err){
-                                        console.log(err);
-                                        throw err;
-                                    });
+                ui.showTweetsList([{'id' : '23423423423452345', 'text' : 'A añadido el tweet'}]);
+                assert.equal($('#twitter-list').children().length,1);
+                done();
             });
             it('Print all Tweets in UI', function (done) {
                 //console.log(ui);
                 DB.getAllTweets(function(tweets){
-                                    ui.showTweetsList(tweets,
-                                        function(){
-                                            assert.equal($('#twitter-list').children().length,100);
-                                            done();
-                                        },
-                                        function(err){
-                                            console.log(err);
-                                            throw err;
-                                        });
+                                    ui.showTweetsList(tweets);
+                                    done();
                                 }, function(err){
                                     console.log(err);
                                     throw err;
                                 });
+                assert.equal($('#twitter-list').children().length,100);
+                done();
             });
-        });
+        });*/
 
     });
 })();

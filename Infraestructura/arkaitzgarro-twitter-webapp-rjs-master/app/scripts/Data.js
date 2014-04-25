@@ -1,5 +1,5 @@
 define('Data', ['ydn-db'], function(ydn) {
-    "use strict";
+    'use strict';
 
     console.log('Data module started');
 
@@ -10,13 +10,19 @@ define('Data', ['ydn-db'], function(ydn) {
 
     var addTweet = function(tweet, success, error) {
         var req = db.add({name: tweetTable, keyPath: keyPath}, tweet);
-        req.done(success);
+        req.done(function(){
+            lanzarEvento();
+            success();
+        });
         req.fail(error);
     };
 
     var addTweets = function(tweets, success, error) {
         var req = db.add({name: tweetTable, keyPath: keyPath}, tweets);
-        req.done(success);
+        req.done(function(keys){
+            lanzarEvento();
+            success(keys);
+        });
         req.fail(error);
     };
 
@@ -60,6 +66,11 @@ define('Data', ['ydn-db'], function(ydn) {
         var req = db.clear(tweetTable);
         req.done(success);
         req.fail(error);
+    };
+
+    var lanzarEvento = function(){
+        var evento = new Event('dataChange');
+        document.dispatchEvent(evento);
     };
 
     return {

@@ -42,9 +42,9 @@
             });
             it('Add duplicate tweet', function (done) {
                 DB.addTweet({id:'1234567890', text:'Mocha testing v2'}, function(){
-                    throw 'Something is broken';
-                }, function(){
                     done();
+                }, function(){
+                    throw 'Something is broken';
                 });
             });
         });
@@ -56,7 +56,7 @@
                     {id:'22222', text:'Mocha testing v3'}
                 ];
 
-                DB.addTweet(tweets, function(keys){
+                DB.addTweets(tweets, function(keys){
                     assert.equal(2, keys.length);
                     done();
                 }, function(err){

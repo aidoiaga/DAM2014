@@ -1,4 +1,4 @@
-define('Service', ['jquery'], function($){
+define('Service', ['quo'], function($){
     "use strict";
 
     console.log('Service module started');
@@ -6,7 +6,7 @@ define('Service', ['jquery'], function($){
     var getTweets = function(config, success, error){
         $.ajax({
             url : '/app/data/tweets.json',
-            dataType : 'JSON',
+            dataType : 'json',
             success : success,
             error : error
         });

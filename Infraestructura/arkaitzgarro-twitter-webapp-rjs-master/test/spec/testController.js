@@ -35,18 +35,16 @@
         describe('#getTweetsFromTwitter', function () {
             it('Get all tweets from twitter and save in BD', function (done) {
                 ctrl.getTweetsFromTwitter(function(){
-                                            assert.isTrue(DB.addTweets.calledOnce, 'addTweets is not executing');
-                                            done();
-                                            /*DB.getTweets(function(tweets){
-                                                assert.equal(100, tweets.length);
-                                                done();
-                                            });*/
-                                        }, function(err){
-                                            console.log(err);
-                                            throw err;
-                                        });
+                    assert.isTrue(DB.addTweets.calledOnce, 'addTweets is not executing');
+                    DB.getAllTweets(function(tweets){
+                        assert.equal(100, tweets.length);
+                        done();
+                    });
+                }, function(err){
+                    console.log(err);
+                    throw err;
+                });
                 assert.isTrue(srv.getTweets.calledOnce, 'getTweets is not executing');
-
             });
         });
 
