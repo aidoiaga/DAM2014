@@ -8,6 +8,9 @@
 </head>
 <body>
     <div id="mocha"></div>
+    <div class="hide">
+        <ul id="twitter-list"></ul>
+    </div>
     <script src="bower_components/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="bower_components/chai/chai.js"></script>
@@ -17,12 +20,29 @@
         var should = chai.should();
     </script>
 
+    <!--Sinon-->
+    <script src="bower_components/sinon/lib/sinon.js"></script>
+    <script src="bower_components/sinon/lib/sinon/call.js"></script>
+    <script src="bower_components/sinon/lib/sinon/spy.js"></script>
+
     <!-- include source files here... -->
-    <script src="../app/bower_components/requirejs/require.js"></script>
+    <script src="../bower_components/requirejs/require.js"></script>
     <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
+    <script src="spec/testDB.js"></script>
+    <script src="spec/testService.js"></script>
+    <script src="spec/testController.js"></script>
+    <script src="spec/testUI.js"></script>
+    <script src="spec/testEvents.js"></script>
 
     <script>mocha.run()</script>
+
+    <script id="list-tpl"   type="text/x-handlebars-template">
+        {{#each tweets}}
+            <li>
+                {{id}} - {{text}}
+            </li>
+        {{/each}}
+    </script>
 
 </body>
 </html>
